@@ -1,3 +1,5 @@
+#!/bin/sh
+
 INSTALL=~/install
 PGDATA=pgdata
 
