@@ -17,5 +17,6 @@ kill $PM_PID
 
 REDO_START="` grep "redo starts at" $LOG | cut -d' ' -f1 `"
 REDO_END="` grep "redo done at" $LOG | cut -d' ' -f1 `"
+CHECKPOINT_END="` grep "checkpoint complete" $LOG | head -1 | cut -d' ' -f1 `"
 
-awk "BEGIN { printf(\"%s\\n\", $REDO_END - $REDO_START); }"
+awk "BEGIN { printf(\"%s, %s\\n\", $REDO_END - $REDO_START, $CHECKPOINT_END - $REDO_END); }"
