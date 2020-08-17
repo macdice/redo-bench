@@ -19,5 +19,7 @@ $INSTALL/bin/pgbench -c8 -j8 -t1000000 postgres
 
 $INSTALL/bin/pg_ctl -D $PGDATA stop -m immediate
 
+sleep 5
+
 mv $PGDATA $PGDATA.save
 

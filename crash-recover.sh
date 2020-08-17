@@ -14,6 +14,7 @@ while ! grep "ready to accept connections" $LOG > /dev/null ; do
 done
 
 kill $PM_PID
+sleep 5
 
 REDO_START="` grep "redo starts at" $LOG | cut -d' ' -f1 `"
 REDO_END="` grep "redo done at" $LOG | cut -d' ' -f1 `"
