@@ -17,4 +17,4 @@ with student's T at 95% confidence.
 | REL\_13\_STABLE    | 84.6s |   3.0s | no difference | |
 | master             | 60.2s |   1.8s | 40% faster than 13 (+/- 7%)| [Commit](https://git.postgresql.org/gitweb/?p=postgresql.git;a=commit;h=c5315f4f44843c20ada876fdb0d0828795dfbdf5) |
 | slru-offload-fsync | 55.5s |   0.4s | 52% faster than 13 (+/- 6.6%), 9% faster than master (+/- 4.0%)| [Proposal](https://commitfest.postgresql.org/29/2669/) |
-| fast-compactify-tuples | 49.5s | 0.6s | 71% faster than 13 (+/- 7.5%), 12% faster than slru-offload-fsync (+/- 1.6%)| [Thread](https://www.postgresql.org/message-id/flat/CA%2BhUKGKMQFVpjr106gRhwk6R-nXv0qOcTreZuQzxgpHESAL6dw%40mail.gmail.com) |
+| fast-compactify-tuples | 49.5s | 0.6s | 71% faster than 13 (+/- 7.5%), 12% faster than slru-offload-fsync (+/- 1.6%)| [Proposal](https://commitfest.postgresql.org/29/2687/) |
