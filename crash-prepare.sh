@@ -15,7 +15,7 @@ $INSTALL/bin/pg_ctl -D $PGDATA start
 $INSTALL/bin/pgbench -i -s10 postgres
 $INSTALL/bin/psql postgres -c checkpoint
 
-$INSTALL/bin/pgbench -c8 -j8 -t1000000 postgres
+$INSTALL/bin/pgbench -Mprepared -c8 -j8 -t1000000 postgres
 
 $INSTALL/bin/pg_ctl -D $PGDATA stop -m immediate
 
