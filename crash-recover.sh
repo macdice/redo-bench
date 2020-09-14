@@ -5,7 +5,7 @@ PGDATA=pgdata
 LOG=postmaster.log
 
 rm -fr $PGDATA
-cp -r $PGDATA.save $PGDATA
+cp -r $PGDATA.crash $PGDATA
 $INSTALL/bin/postgres -D pgdata > $LOG 2>&1 &
 PM_PID=$!
 
