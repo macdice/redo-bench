@@ -4,7 +4,7 @@ INSTALL=~/install
 PGDATA=pgdata
 
 rm -fr $PGDATA $PGDATA.backup
-rm -fr wal-archive
+rm -fr wal-archive wal-archive.backup
 mkdir wal-archive
 
 $INSTALL/bin/initdb -D $PGDATA
@@ -19,7 +19,7 @@ echo "restore_command = 'gunzip -c /home/tmunro/projects/redo-bench/wal-archive/
 $INSTALL/bin/pg_ctl -D $PGDATA start
 $INSTALL/bin/pgbench -i -s10 postgres
 $INSTALL/bin/pg_basebackup -h localhost --checkpoint=fast -Xn -D $PGDATA.backup
-$INSTALL/bin/pgbench -c8 -j8 -Mprepared -t100000 postgres
+$INSTALL/bin/pgbench -c8 -j8 -Mprepared -t1000000 postgres
 $INSTALL/bin/pg_ctl -D $PGDATA stop -m immediate
 
 sleep 5
